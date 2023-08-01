@@ -2,16 +2,14 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-
-
 }
 
 android {
-    namespace 'com.example.mod8viewmodel'
+    namespace 'com.example.mod9room'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.mod8viewmodel"
+        applicationId "com.example.mod9room"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -33,12 +31,20 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        dataBinding true
-    }
 }
 
 dependencies {
+
+    //Room Implementation
+    def room_version = "2.5.0"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt "androidx.room:room-compiler:$room_version"
+
 
     implementation 'androidx.activity:activity-ktx:1.7.2'
     implementation 'androidx.fragment:fragment-ktx:1.6.1'

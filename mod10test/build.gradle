@@ -1,17 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-
-
 }
 
 android {
-    namespace 'com.example.mod8viewmodel'
+    namespace 'com.example.mod10test'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.mod8viewmodel"
+        applicationId "com.example.mod10test"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -33,15 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        dataBinding true
-    }
 }
 
 dependencies {
 
-    implementation 'androidx.activity:activity-ktx:1.7.2'
-    implementation 'androidx.fragment:fragment-ktx:1.6.1'
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'
